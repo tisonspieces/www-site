@@ -107,6 +107,8 @@ const config: Config = {
             }
         ],
     ] satisfies PluginConfig[],
+
+    scripts: [{src: 'https://plausible.io/js/script.js', defer: true, 'data-domain': 'tisonkun.com'}],
 };
 
 export default config;

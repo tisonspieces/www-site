@@ -77,6 +77,16 @@ const config: Config = {
             },
         ],
         [require.resolve("docusaurus-plugin-image-zoom"), {}],
+        async function tailwindcss(context, options) {
+            return {
+                name: "tailwindcss",
+                configurePostCss(options) {
+                    options.plugins.push(require("tailwindcss"));
+                    options.plugins.push(require("autoprefixer"));
+                    return options;
+                },
+            };
+        },
     ] satisfies PluginConfig[],
 
     themes: [

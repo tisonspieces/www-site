@@ -14,10 +14,7 @@ const config: Config = {
         [
             'classic',
             {
-                docs: {
-                    path: 'docs',
-                    routeBasePath: 'docs',
-                },
+                docs: false,
                 blog: {
                     path: 'blog',
                     routeBasePath: 'blog',
@@ -95,6 +92,7 @@ const config: Config = {
                 docsRouteBasePath: [
                     'asfcookbook',
                 ],
+                docsPluginIdForPreferredVersion: 'asfcookbook',
                 language: ["en"],
             }
         ],

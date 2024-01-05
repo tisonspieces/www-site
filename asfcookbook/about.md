@@ -1,8 +1,9 @@
 ---
 slug: /
+sidebar_label: ASF Cookbook
 ---
 
-# Tutorial Intro
+# Three years as an Apache Member
 
 Let's discover **Docusaurus in less than 5 minutes**.
 

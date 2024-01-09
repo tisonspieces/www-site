@@ -73,10 +73,9 @@ const config: Config = {
                 id: 'asfcookbook',
                 path: 'asfcookbook',
                 routeBasePath: 'asfcookbook',
-                sidebarPath: './sidebars/asfcookbook.ts',
+                sidebarPath: './asfcookbook/sidebars.ts',
             },
         ],
-        [require.resolve("docusaurus-plugin-image-zoom"), {}],
         async function tailwindcss(context, options) {
             return {
                 name: "tailwindcss",

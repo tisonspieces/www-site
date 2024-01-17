@@ -13,7 +13,7 @@ In 2022, [Ning Jiang](https://willemjiang.github.io/about/) invited me to become
 
 In March 2022, I noticed that [Kvrocks was seeking for entering the ASF Incubator](https://lists.apache.org/thread/bdtmvbmvzrgjd1kj7mdrp9tkqrhg3d31) to develop its community better. According to [the policy of Apache Incubator](https://incubator.apache.org/policy/incubation.html#joining_the_ipmc), I requested to be an Incubator PMC member and started acting as a mentor of the Kvrocks podling.
 
-[Kvrocks has graduated](https://lists.apache.org/thread/hbl8fsy5pw0k2k6prx62r1v1r7n9psjr) in June 2023. And I gained a lot of experience for running a podling during its incubation. Here are all podlings I mentored:
+[Apache Kvrocks has graduated](pathname:///blog/a-recap-of-apache-kvrocks-becoming-tlp) in June 2023. And I gained a lot of experience for running a podling during its incubation. Here are all podlings I mentored:
 
 | Project                                            | Start          | Graduate  | Role                |
 |----------------------------------------------------|----------------|-----------|---------------------|

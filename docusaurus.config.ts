@@ -39,6 +39,7 @@ const config: Config = {
         navbar: {
             logo: {alt: 'Logo', src: 'img/logo.svg'},
             items: [
+                {to: 'blog', label: 'Blog', position: 'right'},
                 {
                     type: 'dropdown',
                     label: 'Resources',

@@ -133,7 +133,7 @@ Finally, OpenDAL PPMC decides to ask all committers in a poll, in addition to PP
 
 On the other hand, outside the poll, during the two months until the completion of the graduation process, OpenDAL also nominated a PPMC member following the usual process and criteria. In the end, Apache OpenDAL, as a top-level project after graduation, has a total of 14 PMC members: 4 initial members, 3 nominated during incubation, 2 added through the poll, and 5 incubator mentors.
 
-From my personal perspective, community members who are willing to spend time as a Release Manager or act as [CODEOWNERs](https://github.com/apache/opendal/blob/main/.github/CODEOWNERS) for a specific module of the project should be PMC members. Based on this criterion, one of the core developers of PyO3 and the original author of the OpenDAL's Python binding, @messense, is not yet PMC members, and this should be reviewed again.
+From my personal perspective, community members who are willing to spend time as a Release Manager or act as [CodeOwners](https://github.com/apache/opendal/blob/main/.github/CODEOWNERS) for a specific module of the project should be PMC members. Based on this criterion, one of the core developers of PyO3 and the original author of the OpenDAL's Python binding, @messense, is not yet PMC members, and this should be reviewed again.
 
 ## The Official Website and Documents
 
@@ -155,7 +155,7 @@ The documentation on how to contribute to OpenDAL development and handle procedu
 
 The remaining pages, such as the blog, have only published five articles so far. The API pages, except for the Rust documentation, mainly serve as reference manuals for the API documentation of other languages. The Downloads and ASF-related pages are mainly for compliance with ASF requirements and have little value for the project users.
 
-In the graduation self-assessment checklist, project mentor Sheng Wu mentioned the issue of documentation, focusing on versioning the documentation and avoiding exposing documentation for unreleased bindings. In general, this suggestion is based on the standards of [Apache SkyWalking's multi-language integration and multi-module functional documentation](https://skywalking.apache.org/docs/).
+In the graduation self-assessment checklist, project mentor Sheng Wu mentioned the issue of documentation, focusing on versioning the documentation and avoiding exposing documentation for unreleased bindings. In general, this suggestion is based on the standards of [Apache SkyWalking's multilingual SDK and multimodule documentation](https://skywalking.apache.org/docs/).
 
 One of the OpenDAL PMC members, @suyanhanx, has conducted preliminary [research on versioning the documentation](https://github.com/apache/opendal/issues/3319) but has not completed it thoroughly. The development and release documentation has not been updated to include relevant operations.
 

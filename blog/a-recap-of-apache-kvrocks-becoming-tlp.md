@@ -3,7 +3,7 @@ date: 2024-01-17
 slug: a-recap-of-apache-kvrocks-becoming-tlp
 authors:
     name: tison
-    title: Apache Kvrocks PMC Member & Former Mentor
+    title: Apache Kvrocks PMC Member, Former Mentor
     url: https://github.com/tisonkun
     image_url: https://github.com/tisonkun.png
 ---

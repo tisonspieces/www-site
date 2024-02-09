@@ -91,7 +91,7 @@ As early as August 2023, it was evident that OpenDAL was approaching the graduat
 
 ![Apache OpenDAL Graduation TODOs](assets/opendal-graduation-todos.png)
 
-The tasks on this checklist were not all straightforward and easy for the OpenDAL PPMC. Many of them posed significant challenges. As we discuss the challenges faced by OpenDAL during graduation, you will see that some of these challenges were difficult to overcome. Consequently, after completing some of the simpler tasks, there was a period of four to five weeks with no progress on the checklist items.
+The tasks on this checklist were not all straightforward and easy to understand for the OpenDAL PPMC, and many of them were quite challenging. As we delve into the challenges faced by OpenDAL in its graduation process later, you will see that some challenges were difficult to overcome. Consequently, after completing some of the simpler tasks, there was a period of four to five weeks with no progress on the checklist items.
 
 By late November 2023, while preparing to initiate two new incubation proposals, I decided to simultaneously push forward with OpenDAL's graduation work. This was to prevent the theoretically achievable tasks from being delayed indefinitely, requiring a complete restart in the future.
 

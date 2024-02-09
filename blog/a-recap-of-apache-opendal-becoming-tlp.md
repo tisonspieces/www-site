@@ -16,7 +16,7 @@ Apache OpenDAL is a data access layer provided in the form of a software library
 
 OpenDAL is provided as a library, so there is no need to deploy additional services when using OpenDAL. The core of OpenDAL is written in Rust. During the project's incubation and growth, the community has also developed bindings for languages such as Java, Python, Node.js, and C, to support the convenient integration of OpenDAL capabilities into programs written in these languages.
 
-The following diagram lists the online users of Apache OpenDAL's multi-language implementations:
+The following diagram lists the users of Apache OpenDAL's multi-language implementations:
 
 ![Apache OpenDAL Users](assets/opendal-users.png)
 

@@ -103,39 +103,41 @@ In December 2023, the OpenDAL project community internally [reached a consensus 
 
 ## The Criteria of PMC Members
 
-Under the ASF terminology, a PMC (Project Management Committee) member is roughly equivalent to a maintainer of an open-source project. All PMC members are committers and can cast binding votes on project development/management issues.
+Under the ASF terminology, a PMC Member refers to a Project Management Committee member, roughly equivalent to a maintainer of an open-source project. All PMC Members are committers and can cast binding votes on project management issues.
 
-During the incubation, the project also has a Project Management Committee called the PPMC (Podling Project Management Committee), where "podling" refers to a project in incubation. The initial PPMC is typically composed of the Initial Committers in the incubation proposal. New PPMC members are nominated and voted from the current PPMC.
+During the incubation, a project also has a Project Management Committee, known as the Podling Project Management Committee (PPMC), with "Podling" indicating a project that is in incubation. The initial PPMC usually consists of the Initial Committers mentioned in the incubation proposal. This is followed by the nomination and voting process to invite new PPMC members.
 
-When a project graduates, the graduation proposal needs to specify the composition of the PMC for the top-level project. Typically, the original PPMC members, including the project mentors, will join the PMC of the top-level project. Additionally, the committers invited during incubation are potential candidates to become PMC members of the top-level project.
+At the time of graduation, the graduation proposal must specify who will compose the PMC of the new top-level project. Typically, it includes PPMC members and projects mentors. Moreover, committers invited during the incubation stage are potential candidates for membership.
 
 :::note
 
-However, there are exceptions. For example, when Apache Doris graduated, some of the original PPMC members joined the StarRocks company (formerly "DorisDB" which violates ASF Trademark Policy) and continued to damage the Doris brand during incubation. These members were not included in the PMC during graduation and were even no longer committers of the top-level project.
+There are always exceptions. For example, when Apache Doris graduated, some original PPMC members joined the StarRocks company (formerly "DorisDB" which violates ASF Trademark Policy) and continued to damage the Doris brand during the incubation. These members were not included in the PMC at graduation, and were even no longer committers of the top-level project.
 
 :::
 
 * [Have an agreement on the members of the PMC](https://lists.apache.org/thread/rzg7yb14cy2y3dw5twt7olgvy3whc814)
 
-As I mentioned in the [_Maintainers Criteria_](https://www.tisonkun.org/2022/09/12/maintainer-criterions/) blog, I tend to give more privileges to community members who contribute, to reduce the barriers for their participation. Therefore, when initiating discussions on the members of the PMC, I proposed an extreme permissive proposal to include all PPMC members and committers in the PMC.
+As I mentioned in the [_Maintainers Criteria_](https://www.tisonkun.org/2022/09/12/maintainer-criterions/) blog, I tend to give more privileges to community members who contribute, to reduce the barriers for their participation. Therefore, when initiating discussions on OpenDAL PMC members, I proposed an extreme permissive proposal to include all PPMC members and committers in the PMC.
 
 This proposal was challenged by Xuanwo and other PPMC members. They believed that the idea of including committers in the PMC because of the graduation milestone was not feasible.
 
-Later, project mentor Sheng Wu responded by mentioning that ASF culture encourages actively bringing in committers and maintainers. Committers and PMC members have the same code permissions, but PMC members have additional responsibilities for project management, such as handling security issues, responding to the Board's inquiries and requests, participating in version releases and voting resolutions, and so on.
+Later, Sheng Wu responded, stating that ASF culture advocates for actively bringing in committers and maintainers. Committers and PMC members have the same write permissions, but PMC members have additional responsibilities for project management, such as handling security issues, responding to the Board inquiries and demands, participating in releases and voting, and so on.
 
-In the subsequent discussions, OpenDAL PPMC members showed a distinction between PMC members and committers, even to the point of expressing it as a hierarchical system. However, this is more of an expression and contextual difference.
+In subsequent discussions, OpenDAL PPMC members expressed a tendency to differentiate between PMC Members and committers, even leading to a hierarchical discourse. However, this is more a matter of expression and context.
 
 :::note[[I mentioned on Twitter](https://twitter.com/tison1096/status/1730140534302498856)]
 
-In the context of open-source propagation and advocacy in China, there is often a mindset of promoting members or even trading permissions off further engagements. Some even say that participating in open-source is like playing a game and leveling up. It is normal to have different flavors of thought and understandings about how open-source works, but the mindset above is not the approach advocated by the ASF.
+In the context of open-source propagation and advocacy in China, there is often a mindset of promoting members or even trading privileges off further engagements. Some even say that participating in open-source is like playing a game and leveling up.
+
+It is normal to have different flavors of understanding about how open-source works, but the mindset above is indeed not the approach ASF advocates.
 
 :::
 
-Finally, OpenDAL PPMC decides to ask all committers in a poll, in addition to PPMC members and project mentors, if they were willing to participate in project management and become PMC members. If committers do not read the mailing list or respond to this email, it is evident that they are not yet interested in participating in project management affairs. In the end, two committers responded to the thread, and they have been actively involved in project development discussions and organizing version releases recently.
+Ultimately, OpenDAL adopted the approach of including members of the PPMC and project mentors and [asking all committers if they wished to participate in project management](https://lists.apache.org/thread/fzq7yzx4ty7f3vn3r8skby107vlzoy0h) as PMC Members. If a committer does not check the mailing list and respond to this email, they are clearly not interested in participating in project management affairs. Eventually, two committers responded to the email, and they have been actively involved in the project's development discussions and driving version releases recently.
 
-On the other hand, outside the poll, during the two months until the completion of the graduation process, OpenDAL also nominated a PPMC member following the usual process and criteria. In the end, Apache OpenDAL, as a top-level project after graduation, has a total of 14 PMC members: 4 initial members, 3 nominated during incubation, 2 added through the poll, and 5 incubator mentors.
+Additionally, in the two months until the graduation process was completed, OpenDAL nominated one PPMC member following the usual process and criteria. Ultimately, Apache OpenDAL graduated as a top-level project with 14 PMC members: 4 initial members, 3 nominated during incubation, 2 added through polling, and 5 mentors.
 
-From my personal perspective, community members who are willing to spend time as a Release Manager or act as [CodeOwners](https://github.com/apache/opendal/blob/main/.github/CODEOWNERS) for a specific module of the project should be PMC members. Based on this criterion, one of the core developers of PyO3 and the original author of the OpenDAL's Python binding, @messense, is not yet PMC members, and this should be reviewed again.
+From my personal perspective, community members who are willing to spend time as Release Manager or act as [Code Owners](https://github.com/apache/opendal/blob/main/.github/CODEOWNERS) should all be PMC members. By this criterion, the core developer of PyO3 and the original author of the OpenDAL Python binding, @messense, is not yet a PMC member, which is something that should be reviewed again.
 
 ## The Official Website and Documents
 

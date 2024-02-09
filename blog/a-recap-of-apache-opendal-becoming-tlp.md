@@ -50,44 +50,44 @@ As you can see, the API for reading and writing data is thoughtfully designed. U
 
 ## The History of Apache OpenDAL
 
-OpenDAL was initially created by [@Xuanwo](https://xuanwo.io/about/) at DatafuseLabs as a data access layer for the [Databend](https://databend.rs/) project. Going further back, Xuanwo had previously developed a similar software called BeyondStorage during their time at QingCloud. However, due to various reasons, [BeyondStorage eventually ceased development](https://xuanwo.io/en-us/2023/01-beyond-storage-why-we-failed/).
+OpenDAL was initially created by [@Xuanwo](https://xuanwo.io/about/) at DatafuseLabs as a data access layer for the [Databend](https://databend.rs/) project. Prior to OpenDAL, Xuanwo had developed a similar software called BeyondStorage during his time at QingCloud. However, for various reasons, [BeyondStorage eventually ceased development](https://xuanwo.io/en-us/2023/01-beyond-storage-why-we-failed/).
 
-Unlike the setbacks and detours encountered by BeyondStorage, OpenDAL experienced rapid growth under a clear goal:
+In contrast to the setbacks encountered by BeyondStorage, OpenDAL experienced rapid growth with a clear goal in mind:
 
-* In December 2021, Xuanwo started developing the data access layer logic, which later became the core code of OpenDAL, within the Databend codebase.
-* In December 2021, Xuanwo simultaneously began drafting the positioning and goals of OpenDAL.
-* On February 14, 2022, Valentine's Day, the core code of OpenDAL was extracted from the Databend codebase and started operating as an independent open-source project.
+- In December 2021, Xuanwo began developing the data access layer logic, which later became the core of OpenDAL, within the Databend codebase.
+- Simultaneously, in December 2021, Xuanwo started drafting the positioning and goals of OpenDAL.
+- On February 14, 2022, Valentine's Day, the code of OpenDAL was extracted from the Databend codebase and began operating as an independent open-source project.
 
 In August 2022, Xuanwo approached me to discuss the possibility of entering the ASF Incubator.
 
-At that time, the project had been in development for only about six months, with almost all the code being developed by Xuanwo alone and no users outside Databend. I provided Xuanwo with [the podling proposal template](https://cwiki.apache.org/confluence/display/INCUBATOR/New+Podling+Proposal), offered some suggestions for project development, and advised him that if he could focus on user growth, actively integrate with other well-known software, create samples, and attract developers through collaborative development opportunities, the project should possibly reach the level for podling candidates by the end of the year.
+At that time, the project had been in development for only about six months, with almost all the code being developed by Xuanwo alone and no users outside Databend. I provided Xuanwo with [the podling proposal template](https://cwiki.apache.org/confluence/display/INCUBATOR/New+Podling+Proposal), offered suggestions for project development, and advised focusing on user growth, active integration with other well-known software, creating samples, and attracting developers through collaborative development opportunities. By following these guidelines, the project had the potential to become a podling candidate by the end of the year.
 
 :::note
 
-When I review at the commit history of OpenDAL once again, it appears that [GreptimeDB](https://github.com/GreptimeTeam/greptimedb/) should have already started researching and considering the adoption of OpenDAL's solution then. It can be seen that the creators of GreptimeDB were involved in contributing to the releases of [v0.11.0](https://github.com/apache/opendal/releases/tag/v0.11.0) and [v0.11.4](https://github.com/apache/opendal/releases/tag/v0.11.4).
+Upon reviewing the history of OpenDAL once again, it appears that [GreptimeDB](https://github.com/GreptimeTeam/greptimedb/) had already started researching and considering the adoption of OpenDAL. The creators of GreptimeDB were involved in contributing to the releases of [v0.11.0](https://github.com/apache/opendal/releases/tag/v0.11.0) and [v0.11.4](https://github.com/apache/opendal/releases/tag/v0.11.4).
 
 :::
 
-In January 2023, just before the Chinese New Year, I discussed the preparations for graduation from [Apache Kvrocks](a-recap-of-apache-kvrocks-becoming-tlp.md) with its members. I remembered my previous conversation with Xuanwo about OpenDAL's entering the Incubator. So, I drafted the incubation proposal with Xuanwo, and the [incubation proposal discussion](https://lists.apache.org/thread/px7wjcjy3rd4s59d4d3ll1x6y11d240r) began in early February.
+In January 2023, just before the Chinese New Year, I discussed the preparations for graduation from [Apache Kvrocks](a-recap-of-apache-kvrocks-becoming-tlp.md) with its members. I recalled my previous conversation with Xuanwo about OpenDAL's potential entry into the Incubator. Consequently, I collaborated with Xuanwo to draft the incubation proposal, and the [proposal discussion](https://lists.apache.org/thread/px7wjcjy3rd4s59d4d3ll1x6y11d240r) commenced in early February.
 
-Due to the clear positioning of the project and the potential it held as a replacement for the fading [Apache jclouds](https://jclouds.apache.org/) project, the incubation proposal smoothly passed with a "unanimous vote".
+Due to the project's clear positioning and its potential as a replacement for the fading [Apache jclouds](https://jclouds.apache.org/) project, the incubation proposal successfully passed with a "unanimous vote".
 
 :::info[Read more stories during this period]
 
-* [Way to Go: OpenDAL successfully entered Apache Incubator](https://opendal.apache.org/blog/opendal-entered-apache-incubator/)
+* [Way to Go: OpenDAL successfully entered the Apache Incubator](https://opendal.apache.org/blog/opendal-entered-apache-incubator/)
 * [2023-07: Milestones](https://xuanwo.io/reports/2023-07/)
 
 :::
 
-In the following year, the Apache OpenDAL community grew rapidly, achieved significant accomplishments in various aspects such as feature development, version releases, and community expansion:
+In the subsequent year, the Apache OpenDAL community experienced rapid growth and achieved significant milestones in various areas, including feature development, version releases, and community expansion:
 
 ![Apache OpenDAL Incubation Status](assets/opendal-incubation-status.png)
 
-The image above shows that during incubation, OpenDAL nominated 10 new committers and 3 new PPMC members. Additionally, 8 different release managers published 11 versions that complied with Apache standards.
+The image above illustrates that during incubation, OpenDAL welcomed 10 new committers and 3 new PPMC members. Additionally, 8 different release managers published 11 versions that adhered to Apache standards.
 
-Beyond what the image shows, during incubation, OpenDAL initiated and implemented 23 technical proposals, addressed over 1000 issue reports, and merged over 2000 code patches.
+Beyond what the image shows, OpenDAL initiated and implemented 23 technical proposals, addressed over 1000 issue reports, and merged over 2000 patches during incubation.
 
-As early as August 2023, I concluded that OpenDAL was approaching the graduation criteria. In October 2023, after some communication, one of the project mentors, Sheng Wu, created a [checklist](https://github.com/apache/opendal/issues/3283) of tasks that needed to be completed before graduation, officially initiating the graduation process.
+As early as August 2023, it was evident that OpenDAL was approaching the graduation criteria. In October 2023, after some communication, one of the project mentors, Sheng Wu, created a [checklist](https://github.com/apache/opendal/issues/3283) of tasks that needed to be completed before graduation, officially initiating the graduation process.
 
 ![Apache OpenDAL Graduation TODOs](assets/opendal-graduation-todos.png)
 

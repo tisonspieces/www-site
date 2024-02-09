@@ -13,16 +13,16 @@ In 2022, [Ning Jiang](https://willemjiang.github.io/about/) invited me to become
 
 In March 2022, I noticed that [Kvrocks was seeking for entering the ASF Incubator](https://lists.apache.org/thread/bdtmvbmvzrgjd1kj7mdrp9tkqrhg3d31) to develop its community better. According to [the policy of Apache Incubator](https://incubator.apache.org/policy/incubation.html#joining_the_ipmc), I requested to be an Incubator PMC member and started acting as a mentor of the Kvrocks podling.
 
-[Apache Kvrocks has graduated](pathname:///blog/a-recap-of-apache-kvrocks-becoming-tlp) in June 2023. And I gained a lot of experience for running a podling during its incubation. Here are all podlings I mentored:
+[Apache Kvrocks has graduated][graduation-kvrocks] in June 2023. And I gained a lot of experience for running a podling during its incubation. Here are all podlings I mentored:
 
-| Project                                            | Start          | Graduate     | Role                |
-|----------------------------------------------------|----------------|--------------|---------------------|
-| [Apache Kvrocks](https://kvrocks.apache.org/)      | April 2022     | June 2023    | Mentor              |
-| [Apache StreamPark](https://streampark.apache.org) | September 2022 |              | Champion and Mentor |
-| [Apache OpenDAL](https://opendal.apache.org)       | February 2023  | January 2024 | Champion and Mentor |
-| [Apache Answer](https://answer.apache.org/)        | October 2023   |              | Mentor              |
-| [Apache HoraeDB](https://horaedb.apache.org)       | December 2023  |              | Champion and Mentor |
-| [Apache Fury](https://fury.apache.org)             | December 2023  |              | Champion and Mentor |
+| Project                                            | Start          | Graduate                           | Role                |
+|----------------------------------------------------|----------------|------------------------------------|---------------------|
+| [Apache Kvrocks](https://kvrocks.apache.org/)      | April 2022     | [June 2023][graduation-kvrocks]    | Mentor              |
+| [Apache StreamPark](https://streampark.apache.org) | September 2022 |                                    | Champion and Mentor |
+| [Apache OpenDAL](https://opendal.apache.org)       | February 2023  | [January 2024][graduation-opendal] | Champion and Mentor |
+| [Apache Answer](https://answer.apache.org/)        | October 2023   |                                    | Mentor              |
+| [Apache HoraeDB](https://horaedb.apache.org)       | December 2023  |                                    | Champion and Mentor |
+| [Apache Fury](https://fury.apache.org)             | December 2023  |                                    | Champion and Mentor |
 
 Besides, I participate in maintaining a few of Apache projects:
 
@@ -42,3 +42,6 @@ This cookbook documents:
 3. My understanding of [The Apache Way](https://www.apache.org/theapacheway/)
 
 You can use it as an index or an unofficial explanation of ASF documents and policies. My personal interpretation and experience may help you succeed in the ASF. **However, please never use this cookbook as an official reference in conversations.**
+
+[graduation-kvrocks]: pathname:///blog/a-recap-of-apache-kvrocks-becoming-tlp
+[graduation-opendal]: pathname:///blog/a-recap-of-apache-opendal-becoming-tlp

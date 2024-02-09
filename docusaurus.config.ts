@@ -1,6 +1,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config, PluginConfig} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import remarkGfm from "remark-gfm";
 
 const config: Config = {
     title: 'tisonkun.com',
@@ -75,6 +76,7 @@ const config: Config = {
                 path: 'asfcookbook',
                 routeBasePath: 'asfcookbook',
                 sidebarPath: './asfcookbook/sidebars.ts',
+                remarkPlugins: [remarkGfm]
             },
         ],
         async function tailwindcss(context, options) {

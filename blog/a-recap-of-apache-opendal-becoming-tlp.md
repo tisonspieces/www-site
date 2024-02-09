@@ -340,9 +340,9 @@ This is a good thing. After all, only with the addition of fresh blood can the f
 
 From another perspective, why does Justin vote -1 frequently within the Incubator? In fact, this also reflects the issue of talent development within the Incubator. Because too many people don't care about ASF policies and what form The Apache Way should take to build a community and release open-source software, these policy violations and cultural conflicts keep pressing on Justin to handle.
 
-Over time, instead of making the effort to understand the history of project community development, who did what and why, the inherent laziness of human nature drives those with strict requirements to directly slap a -1 on the face and demand self-reflection. For me, I have enough motivation to address compliance and cultural issues. I believe that cooperation and resolving issues through discussion would be more effective. However, for certain projects, it is true that if you don't give them a -1, they won't pay attention to you, and there have been such cases.
+Over time, instead of trying to understand the history of project community development, who did what and why, the inherent laziness of human nature drives those with strict requirements to immediately give a -1 say, "Reflect on yourself." Personally, I have enough motivation to handle compliance and cultural issues. I believe that cooperation and resolving issues through discussion would be sufficient. However, for certain projects, it is true that if you don't vote -1, they won't pay attention to you. There have been such cases.
 
-At a higher level, the form of community development and incubation projects within ASF still follows a somewhat tribal-style approach. ASF originated from a group of developers, being in the same camp, coming together to form the Apache Group and continued the model of "a small group of people with a series of tribal knowledge running an open-source community".
+At a higher level, the issue is that ASF's community development still follows a somewhat "workshop-style" approach. ASF originated from a group of developers, being in the same camp, coming together to form the Apache Group and continued the model of "a small group of people with a series of tribal knowledge running an open-source community".
 
 :::note[Quote]
 
@@ -350,7 +350,7 @@ The ASF is well past the point where a small number of folks who have huge "trib
 
 :::
 
-When discussing these issues, I have actively pushed for and resolved a series of missing documentation, facilitating the generation and summarization of best practices. I have also contemplated how we can effectively disseminate these policies, principles, and culture to a wider audience, enabling them to take on the responsibility of spreading them proactively. I believe that after 25 years, ASF should consider and improve upon these issues in the face of new open-source community dynamics and software development methodologies. In fact, this path is also a significant avenue for individuals who engage with Apache community concepts and methodologies through participation in ASF projects to grow into foundation members.
+While discussing these issues, I have been pushing for and actively fixing a series of missing documentation, promoting the generation and consolidation of best practices, and considering how we can spread these policies, principles, and culture to more people, enabling them to take on the responsibility of propagating and disseminating them proactively. I believe that after 25 years, ASF should consider and improve upon these issues in the face of new open-source community situations and software development methods. In fact, this is also a path for people, who engage with ASF projects and learn The Apache Way, to grow into foundation members.
 
 ## References
 

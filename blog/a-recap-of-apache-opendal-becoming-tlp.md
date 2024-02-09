@@ -143,36 +143,39 @@ From my personal perspective, community members who are willing to spend time as
 
 ![Apache OpenDAL Homepage](assets/opendal-homepage.png)
 
-The official website of OpenDAL is not quite "impressive". On one hand, this is because most of the core developers lack frontend development skills. On the other hand, as a software library integrated into applications, OpenDAL does not require a standalone deployment or a console for managing services, so there is no need for a dedicated page to showcase those aspects. In most cases, OpenDAL is used by calling its APIs within software.
+OpenDAL's official website is not quite impressive.
 
-In the homepage information displayed above, three main extension points are highlighted:
+This is partly because the core developers largely lack front-end development skills, and partly because, as a library intended for integration into applications, OpenDAL does not require separate service deployment. Consequently, it doesn't need a dedicated service management page for display. In most cases, OpenDAL is utilized within applications through API calls.
 
-1. OpenDAL's core is a Rust library but provides bindings for multiple languages, allowing it to be called from programs written in various languages. Providing bindings for new languages is an extension point.
-2. The core value of OpenDAL is to abstract different storage service backends, enabling users to access data from different locations using a unified API. Integrating new storage backends is an extension point.
-3. OpenDAL has designed a `Layer` abstraction to provide different aspects of enhancement on the unified API access chain, including retry, logging, monitoring, timeouts, and other functionalities.
+The homepage showcases OpenDAL's three main extension points:
+
+1. OpenDAL's core is a Rust library, but it offers bindings for multiple languages, allowing it to be called from programs written in those languages. Providing new language bindings is an extension point.
+2. At its core, OpenDAL's value lies in abstracting away the differences between storage services, enabling users to access data at different locations using a unified API. Adding new storage backend integrations is an extension point.
+3. OpenDAL has designed a `Layer` abstraction to provide enhancements on different aspects of the unified API access chain, including retries, logging, monitoring, timeouts, etc.
 
 ![Apache OpenDAL Docs](assets/opendal-docs.png)
 
-The documentation navigation page displays almost all the content: the design philosophy of OpenDAL and how to configure the software libraries for the four officially released languages, with a link to the QuickStart page. The sidebar section titled "Services" is more of a reference manual for part of the supported storage backends than documentation.
+The documentation navigation displays all the content at once: OpenDAL's design philosophy and how to configure the officially released libraries. "Services" are more of a reference manual for the supported storage backends.
 
-The documentation on how to contribute to OpenDAL development and handle procedural work as a committer or PMC member is relatively comprehensive due to practical needs.
+Conversely, the documentation on how to get involved in OpenDAL development and handle project management tasks as a committer or PMC member is relatively complete, due to frequently actual need.
 
-The remaining pages, such as the blog, have only published five articles so far. The API pages, except for the Rust documentation, mainly serve as reference manuals for the API documentation of other languages. The Downloads and ASF-related pages are mainly for compliance with ASF requirements and have little value for the project users.
+Other pages, like the blog, which has only posted five articles, and the API page, which mainly serves as a reference manual for languages other than Rust, have less impact. The "Downloads" and ASF-related pages primarily exist to meet ASF requirements and offer little value to the project itself.
 
-In the graduation self-assessment checklist, project mentor Sheng Wu mentioned the issue of documentation, focusing on versioning the documentation and avoiding exposing documentation for unreleased bindings. In general, this suggestion is based on the standards of [Apache SkyWalking's multilingual SDK and multimodule documentation](https://skywalking.apache.org/docs/).
+Sheng Wu mentioned the documentation issue in the graduation checklist, focusing on the need for documentation versioning and avoiding exposing temporary documents of unreleased libraries. Broadly speaking, he was suggesting that OpenDAL follow the documentation practices of [Apache SkyWalking's multilingual and multimodule documentation](https://skywalking.apache.org/docs/).
 
-One of the OpenDAL PMC members, @suyanhanx, has conducted preliminary [research on versioning the documentation](https://github.com/apache/opendal/issues/3319) but has not completed it thoroughly. The development and release documentation has not been updated to include relevant operations.
+One of the OpenDAL PMC members, @suyanhanx, initially completed the [research on documentation versioning](https://github.com/apache/opendal/issues/3319), but it was not fully implemented, nor were the development and release documents updated to include the relevant operations.
 
-I believe there is still significant room for improvement in OpenDAL's documentation. However, during the graduation check, I used the following criteria:
+I believe there is significant room for improvement in OpenDAL's documentation. However, during the graduation check, I used the following standards:
 
-* The official website should be functional, and all links should be valid and ready when discussing related concepts.
-* At the very least, it should provide enough information for people who want to use OpenDAL, with a clear reading journey for the entire content. As for versioning, since OpenDAL has not reached version 1.0, it can initially provide documentation for the nightly version, as that is the current usage by users.
+* The official website should be roughly functional, with valid reference links when discussing related concepts.
+* At the very least, it should provide enough information for people who want to use OpenDAL, with a clear reading journey for the entire content.
+* As for versioning, since OpenDAL hasn't reached version 1.0, it can temporarily provide only documentation for the nightly version, as that is the current usage by users.
 
-In fact, detailed versioned documentation regarding the core design of OpenDAL and the usage of various service backends is already included in the [Rust core](https://opendal.apache.org/docs/rust/opendal/docs/index.html).
+In fact, [detailed versioned documentation](https://docs.rs/opendal/latest/opendal/) regarding the core design of OpenDAL and the usage of various service backends is already provided.
 
 ![Apache OpenDAL Rust Docs](assets/opendal-rust-docs.png)
 
-In my opinion, the next steps for optimizing OpenDAL's documentation should focus on clarifying the definition of concepts, common design and usage patterns, and translation idioms between different languages. Under this premise, the actual documentation content can be linked to the living documentation accompanying the code in the Rust core, utilizing the comprehensive documentation present in the Rust API documentation.
+Going forward, in addition to completing the versioned releases for all languages, OpenDAL's documentation should focus on clarifying concept definitions, common design and usage patterns, and the translation idioms between different languages. Under this premise, directing the actual documentation content to the living documentation alongside code in the Rust core implementation could leverage the comprehensive documentation available in the Rust API docs.
 
 The actual reading journey for users starts by referring to the documentation on design and usage patterns to determine which specific module's documentation they need to look for in the Rust API documentation. After understanding the corresponding interface contracts, they can then refer to the translation idioms of the interfaces in their preferred programming language to complete the development.
 
@@ -180,58 +183,58 @@ If this level of documentation can be achieved, from a software product perspect
 
 ## Develop and Distribute of Multilingual Bindings
 
-As mentioned above, one of the key features of OpenDAL is its multilingual bindings, allowing the utilization of OpenDAL's capabilities written in various languages. This is also why OpenDAL can be considered a replacement for the jclouds library written in Java.
+As mentioned earlier, one of the key features of OpenDAL is its multilingual bindings on top of its Rust core library. This allows programs written in various languages to leverage the capabilities of OpenDAL. This is also why OpenDAL can serve as a replacement for the jclouds library, which is written in Java.
 
-Currently, the officially released libraries for OpenDAL are as follows:
+Currently, the officially released bindings for OpenDAL in four languages are as follows:
 
 * [Rust Core](https://crates.io/crates/opendal): Native Rust library
-* [Java Binding](https://github.com/apache/opendal/blob/main/bindings/java/README.md): Implemented using [jni-rs](https://github.com/jni-rs/jni-rs)
-* [Python Binding](https://pypi.org/project/opendal/): Implemented using [PyO3](https://github.com/PyO3/pyo3)
-* [Node.js Binding](https://www.npmjs.com/package/opendal): Implemented using [napi-rs](https://github.com/napi-rs/napi-rs)
+* [Java Binding](https://github.com/apache/opendal/blob/main/bindings/java/README.md): Bindings created using [jni-rs](https://github.com/jni-rs/jni-rs) and JNI technology
+* [Python Binding](https://pypi.org/project/opendal/): Bindings created using [PyO3](https://github.com/PyO3/pyo3) technology
+* [Node.js Binding](https://www.npmjs.com/package/opendal): Bindings created using napi-rs and NAPI technology
 
-The bindings for other languages that are still under development include:
+Other language bindings currently under development include:
 
-* C
-* C++
-* .NET
-* Golang
-* Haskell
-* Lua
-* OCaml
-* PHP
-* Ruby
-* Swift
-* Zig
+* [C](https://github.com/apache/opendal/blob/main/bindings/c/README.md)
+* [C++](https://github.com/apache/opendal/blob/main/bindings/cpp/README.md)
+* [.NET](https://github.com/apache/opendal/blob/main/bindings/dotnet/README.md)
+* [Golang](https://github.com/apache/opendal/blob/main/bindings/golang/README.md)
+* [Haskell](https://github.com/apache/opendal/blob/main/bindings/haskell/README.md)
+* [Lua](https://github.com/apache/opendal/blob/main/bindings/lua/README.md)
+* [OCaml](https://github.com/apache/opendal/blob/main/bindings/ocaml/README.md)
+* [PHP](https://github.com/apache/opendal/blob/main/bindings/php/README.md)
+* [Ruby](https://github.com/apache/opendal/blob/main/bindings/ruby/README.md)
+* [Swift](https://github.com/apache/opendal/blob/main/bindings/swift/README.md)
+* [Zig](https://github.com/apache/opendal/blob/main/bindings/zig/README.md)
 
-Among these, the C Binding has already been used in production environments, while the bindings for other languages have not been released yet or may only have a placeholder.
+Among these, the C Binding has already been used in production environments, while the bindings for other languages are either not yet released or only have a placeholder implementation.
 
-During the development of the language bindings, OpenDAL has summarized a set of best practices:
+During the development of multilingual bindings, OpenDAL has summarized a set of best practices:
 
 1. Develop a "Hello World" example roughly.
 2. Refactor to establish basic engineering, compilation, and testing structures.
 3. Refactor to design basic API mappings.
 4. Ensure the corresponding release process for each language.
 
-Among these steps, the most challenging part is the engineering aspect and understanding how to ultimately release to the target platform. Currently, the design and development of the C Binding are relatively mature, but due to the lack of a standardized release approach in the C ecosystem, the C Binding has not been officially released.
+Among these steps, the most challenging aspects are the engineering part and understanding how to distribute to the target platforms. Currently, the design and development of the C Binding are relatively well-established. However, due to the lack of a standardized distribution process in the C ecosystem, the official release of the C Binding has been delayed.
 
-In contrast, languages like Rust, Python, and Node.js, which have a de-facto release platforms (central repository), allow OpenDAL to easily create corresponding GitHub Actions workflows for automated releases.
+In contrast, languages like Rust, Python, and Node.js, which have officially endorsed distribution platforms, allow OpenDAL to easily create corresponding GitHub Actions workflows for automated releases.
 
-It is worth mentioning that although most Java libraries are published on Maven Central, the repository for ASF software is not the commonly used Sonatype repository but the ASF own repository. Considering that [Apache Maven](https://maven.apache.org/) is also an ASF project, this is not surprising. However, this means that supporting automatic releases for OpenDAL Java Binding requires the involvement of ASF INFRA. OpenDAL Java Binding is the second Java library supported by ASF for automatic releases and the first Java library to automatically release JNI native shared libraries. The related work includes:
+It is worth mentioning that although most Java libraries are published on Maven Central, the repository used by ASF projects is not the commonly used Sonatype repository but ASF's own repository. Considering that [Apache Maven](https://maven.apache.org/) is also an ASF project, this is not surprising. However, this means that supporting the automatic release of OpenDAL Java Binding requires involvement from ASF INFRA. OpenDAL Java Binding is the second Java library supported by ASF for automated releases and the first Java library to automate the release of JNI native shared libraries. The related work includes:
 
 * [Setup opendal-java project GitHub secrets for signing artifacts](https://issues.apache.org/jira/browse/INFRA-24880)
 * [ci: automatic java binding release](https://github.com/apache/opendal/pull/2557)
 * [docs: auto release maven artifacts](https://github.com/apache/opendal/pull/2729)
 * [docs(release): describe how to close the Nexus staging repo](https://github.com/apache/opendal/pull/3125)
 
-In addition, the OpenDAL PMC actively collaborates with ASF trademark officers to explore the possibility of releasing the OpenDAL NPM package under [the @apache scope](https://www.npmjs.com/org/apache).
+In addition, the OpenDAL PMC actively collaborates with ASF trademark officers to explore the possibility of distributing the OpenDAL NPM package under the `@apache` scope:
 
 * [Add Apache org account as the OpenDAL NPM package owner](https://issues.apache.org/jira/browse/INFRA-25325)
 
-The progress of Jarek Potiuk from Apache Airflow in collaborating with the PyPI team to create an ASF account is closely monitored by the OpenDAL PMC. Once established, OpenDAL Python Binding will be integrated under this account.
+Jarek Potiuk from Apache Airflow is working with the PyPI team to create an ASF account. The OpenDAL PMC watches the progress and is ready to integrate the OpenDAL Python Binding into this account:
 
 * [Provide a trusted PyPI publisher capability for Python projects via INFRA](https://issues.apache.org/jira/browse/INFRA-24678)
 
-You can see that OpenDAL takes releases seriously and has effectively improved the reliability of package releases through the mechanisms provided by the platform and collaboration with ASF INFRA.
+It is evident that OpenDAL takes software distribution seriously and, through the mechanisms provided by the platforms and close collaboration with ASF INFRA, effectively enhances the reliability of the released software packages.
 
 Finally, ASF also attaches great importance to the software dependencies used by the released software in terms of technical compliance and whether they comply with the [ASF 3RD PARTY LICENSE POLICY](https://www.apache.org/legal/resolved.html). OpenDAL provides a DEPENDENCIES file for each released artifact to disclose this information. Additionally, since most language bindings are a wrapping layer of the Rust core library, OpenDAL developers strive to minimize unnecessary third-party dependencies to reduce compliance burdens when used downstream.
 

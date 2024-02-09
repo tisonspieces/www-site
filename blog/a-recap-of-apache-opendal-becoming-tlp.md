@@ -12,15 +12,15 @@ authors:
 
 ## What is Apache OpenDAL?
 
-Apache OpenDAL is a data access layer provided as a software library. It allows users to access data on different storage services through a unified and efficient API. You can think of it as a better implementation of an S3 SDK, or use the unified APIs to simplify the configuration and access to various data storage services such as S3, HDFS, GCS, Aliyun OSS, and more.
+Apache OpenDAL is a data access layer provided as a software library. It allows users to access data on different storage services through a unified and efficient API. You can think of it as a better implementation of an S3 SDK, or leverage its unified APIs to streamline the configuration and access process for various data storage services, including S3, HDFS, GCS, Aliyun OSS, and more.
 
-OpenDAL is provided in the form of a library, so there is no need to deploy additional services when using OpenDAL. The core of OpenDAL is written in Rust, making it a native Rust software library. During the project's incubation and growth, the community has also developed bindings for other languages such as Java, Python, Node.js, and C to support easy integration of OpenDAL functionalities into programs written in those languages.
+OpenDAL is provided in the form of a library, so there is no need to deploy additional services when using OpenDAL. The core of OpenDAL is written in Rust, making it [a native Rust library](https://crates.io/crates/opendal). During OpenDAL's incubation and growth, the community has also developed bindings for other languages such as Java, Python, Node.js, and C. These developments ensure seamless integration of OpenDAL's functionalities into applications written in these languages
 
-The following diagram shows users of Apache OpenDAL's multi-language implementations:
+The diagram below illustrates the diverse user base of Apache OpenDAL, showcasing its multi-language implementations and the broad spectrum of applications it supports:
 
 ![Apache OpenDAL Users](assets/opendal-users.png)
 
-You can use OpenDAL's unified APIs as below:
+Using OpenDAL's unified APIs is straightforward, as demonstrated in the following Rust example:
 
 ```rust
 async fn do_business() -> Result<()> {
@@ -44,7 +44,7 @@ async fn do_business() -> Result<()> {
 }
 ```
 
-As you can see, the API for reading and writing data is carefully designed. Users can access data stored on different services by simply modifying the configuration constructor of the Operator, without the need to modify any code for the concrete read and write operations.
+As you can see, the API for reading and writing data is thoughtfully designed. Users can access data stored on different services by simply modifying the configuration constructor of the Operator, without the need to modify any code for the specific read and write operations.
 
 <!-- truncated -->
 

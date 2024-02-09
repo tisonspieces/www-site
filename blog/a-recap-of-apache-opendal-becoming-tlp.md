@@ -85,21 +85,21 @@ Over the next year, the Apache OpenDAL community saw rapid development, achievin
 
 ![Apache OpenDAL Incubation Status](assets/opendal-incubation-status.png)
 
-The image above illustrates that during incubation, OpenDAL welcomed 10 new committers and 3 new PPMC members. Additionally, 8 different release managers published 11 versions that adhered to Apache standards.
+The picture above illustrates that during the incubation, OpenDAL welcomed 10 new Committers and 3 new PPMC members, with 8 different Release Managers publishing 11 releases that conformed to Apache standards.
 
-Beyond what the image shows, OpenDAL initiated and implemented 23 technical proposals, addressed over 1000 issue reports, and merged over 2000 patches during incubation.
+Beyond what the picture shows, OpenDAL initiated and implemented 23 technical proposals, addressed over 1000 issue reports, and merged over 2000 patches during incubation.
 
-As early as August 2023, it was evident that OpenDAL was approaching the graduation criteria. In October 2023, after some communication, one of the project mentors, Sheng Wu, created a [checklist](https://github.com/apache/opendal/issues/3283) of tasks that needed to be completed before graduation, officially initiating the graduation process.
+As early as August 2023, I assessed that OpenDAL was nearing the criteria for graduation. In October 2023, after some discussions, one of the project mentors, Sheng Wu, created a [checklist](https://github.com/apache/opendal/issues/3283) of tasks that needed to be completed before graduation, officially initiating the graduation process.
 
 ![Apache OpenDAL Graduation TODOs](assets/opendal-graduation-todos.png)
 
-The tasks on this checklist were not all straightforward and easy to understand for the OpenDAL PPMC, and many of them were quite challenging. As we delve into the challenges faced by OpenDAL in its graduation process later, you will see that some challenges were difficult to overcome. Consequently, after completing some of the simpler tasks, there was a period of four to five weeks with no progress on the checklist items.
+The tasks on this checklist were not all straightforward and easy to understand for the OpenDAL PPMC, and many of them were quite challenging. As we delve into the challenges faced by OpenDAL in its graduation process later, you will see that some challenges were difficult to overcome. Thus, after completing some of the more understandable tasks, the list saw a standstill of four to five weeks with no progress.
 
-By late November 2023, while preparing to initiate two new incubation proposals, I decided to simultaneously push forward with OpenDAL's graduation work. This was to prevent the theoretically achievable tasks from being delayed indefinitely, requiring a complete restart in the future.
+By the end of November 2023, while preparing to initiate two new incubation proposals, I also decided to push forward with OpenDAL's graduation efforts to avoid the situation where tasks, theoretically achievable in one go, become dragged out and need to be restarted completely in the future.
 
-In hindsight, during discussions with Xuanwo, I learned that developers generally felt unfamiliar with those tasks. Faced with many tasks that they didn't know how to start, their initial reaction was to subconsciously delay them. As a project mentor, I explained these tasks, which had a bureaucratic nature, to the PPMC members using plain language and broke them down into practical and executable tasks in order to move the project towards graduation.
+In hindsight, through discussions with Xuanwo, I learned that developers generally felt unfamiliar with those tasks. Faced with many tasks that seemed daunting at first glance, their initial reaction was to subconsciously put them off. As a project mentor, I explained these tasks, which were somehow tinged with bureaucracy, in plain language to the PPMC members and broke them down into practical, executable tasks, moving the project towards graduation.
 
-In December 2023, the OpenDAL project community [reached a consensus on graduation](https://lists.apache.org/thread/kq00ynqtbbwsh2n7485s5vypzjropck6). Subsequently, the graduation proposal was submitted for discussion on the ASF Incubator mailing list. After a month of intense discussion and continued resolution of project issues, in January 2024, the project successfully [passed the graduation vote](https://lists.apache.org/thread/nxd3218gdnylp8g2w7jhcjktorthjydl) and was approved by the Board of Directors during the Board Meeting: **Apache OpenDAL officially became a top-level project of the ASF**.
+In December 2023, the OpenDAL project community internally [reached a consensus on graduation](https://lists.apache.org/thread/kq00ynqtbbwsh2n7485s5vypzjropck6). Subsequently, the graduation proposal was submitted for discussion to the ASF Incubator mailing list. After a month of discussion and continuous resolving issues, in January 2024, the project successfully [passed the graduation vote](https://lists.apache.org/thread/nxd3218gdnylp8g2w7jhcjktorthjydl) and was approved by the Board of Directors during the Board Meeting: **Apache OpenDAL officially became a top-level project of the ASF**.
 
 ## The Criteria of PMC Members
 

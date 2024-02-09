@@ -68,7 +68,7 @@ Reviewing OpenDAL's commit history today, it appears that [GreptimeDB](https://g
 
 :::
 
-In January 2023, just before the Chinese New Year, I was discussing with members of [Apache Kvrocks](https://kvrocks.apache.org/) about starting preparations for graduation after the new year. Recalling previous conversations with Xuanwo about OpenDAL's intention to enter the incubator, I pulled Xuanwo into drafting the incubation proposal, and we initiated the [proposal discussion](https://lists.apache.org/thread/px7wjcjy3rd4s59d4d3ll1x6y11d240r) in early February.
+In January 2023, just before the Chinese New Year, I was discussing with members of [Apache Kvrocks](https://kvrocks.apache.org/) about starting preparations for graduation after the new year. Recalling previous conversations with Xuanwo about OpenDAL's intention to enter the Incubator, I pulled Xuanwo into drafting the incubation proposal, and we initiated the [proposal discussion](https://lists.apache.org/thread/px7wjcjy3rd4s59d4d3ll1x6y11d240r) in early February.
 
 Thanks to the project's clear positioning and its potential to replace the fading [Apache jclouds](https://jclouds.apache.org/) project, the incubation proposal was ["unanimously passed"](https://lists.apache.org/thread/h76wsb582xjdph6p430vjq3oq26502bc).
 
@@ -236,13 +236,13 @@ Jarek Potiuk from Apache Airflow is working with the PyPI team to create an ASF 
 
 It is evident that OpenDAL takes software distribution seriously and, through the mechanisms provided by the platforms and close collaboration with ASF INFRA, effectively enhances the reliability of the released software packages.
 
-Finally, ASF also attaches great importance to the software dependencies used by the released software in terms of technical compliance and whether they comply with the [ASF 3RD PARTY LICENSE POLICY](https://www.apache.org/legal/resolved.html). OpenDAL provides a DEPENDENCIES file for each released artifact to disclose this information. Additionally, since most language bindings are a wrapping layer of the Rust core library, OpenDAL developers strive to minimize unnecessary third-party dependencies to reduce compliance burdens when used downstream.
+Finally, ASF places great importance on the compliance of the software's dependencies with the software license policies outlined as [ASF 3RD PARTY LICENSE POLICY](https://www.apache.org/legal/resolved.html). OpenDAL provides a `DEPENDENCIES` file for each released artifact to disclose this information. Additionally, since most of the language bindings for OpenDAL are wrapping layers of the Rust core library, the developers strive to minimize unnecessary third-party dependencies to reduce compliance burdens for downstream users.
 
-Technically, due to the need to integrate with multiple storage service backends and the vision of providing bindings for different languages, OpenDAL places great emphasis on code engineering.
+From a technical perspective, due to the need to integrate with multiple storage service backends and the vision of providing bindings in different languages, OpenDAL places a strong emphasis on engineering.
 
-By checking [OpenDAL's GitHub Actions workflows](https://github.com/apache/opendal/tree/main/.github/workflows), you can find that OpenDAL has developed a reusable testing framework, allowing any new language bindings or storage service backends to quickly have the existing test coverage. However, this is not unique, as SkyWalking, which also provides multi-language support and modular development, has developed the [SkyWalking Infra E2E testing framework](https://github.com/apache/skywalking-infra-e2e) suitable for its own situation.
+By checking [OpenDAL's GitHub Actions workflows](https://github.com/apache/opendal/tree/main/.github/workflows/), one can discover that OpenDAL has developed a reusable testing framework. Any new language binding or storage service backend can quickly have the existing test coverage. Similarly, SkyWalking, which also provides multi-language support and follows a modular development approach, has developed the [SkyWalking Infra E2E](https://github.com/apache/skywalking-infra-e2e/) testing framework tailored to its own needs.
 
-As for language binding technology, Rust's native support for C FFI makes implementing C bindings very smooth. Most languages also provide integration methods for accessing C APIs, so C bindings can be used to generate bindings for other languages. This is also the implementation method for OpenDAL's Haskell, Lua, and Zig bindings.
+In terms of language binding technologies, Rust's support for C FFI makes the implementation of the C Binding very smooth. Most languages also provide integration methods to access C APIs, allowing the creation of bindings for other languages. This is also the approach taken for various bindings in OpenDAL, such as Haskell, Lua, and Zig.
 
 In addition to these solutions that heavily utilize existing technologies, the aforementioned technologies such as jni-rs and napi-rs encapsulate a layer of interfaces that conform to Rust conventions on top of the existing C API integration methods. This allows the development process to only involve the Rust language and the target language of the bindings. PyO3 goes even further by developing a scaffolding for this development process, simplifying the packaging and configuration integration work. It can be said that this is the Rust ecosystem actively approaching the target language of the bindings. At the low-level technical level, communication still relies on the C ABI on both sides.
 
@@ -250,51 +250,45 @@ Therefore, all of these technologies can be classified under the FFI framework, 
 
 ## Policies, Bureaucracy, and Foundation Development
 
-:::warning
+As previously mentioned, after the discussion on graduation moved to incubator's mailing list, it underwent a month of intense deliberation and continued addressing of the project's existing issues before successfully graduating.
 
-This blog is translated by ChatGPT from my Chinese blog. The wording is under improved, so certain words misuse can exist, especially on praise and disparage.
+Most of the pre-graduation issues were actually included in the checklist. During the process of addressing the checklist, some time was spent researching and discussing issues related to document versioning, dependency compliance, and PMC membership, with the rest of the tasks being completed in an orderly and successful manner.
 
-:::
+However, an important issue that was overlooked in the checklist was the adherence to the ASF's brand policy by the PMC, to protect both the project brand and ASF's brand. A fundamental aspect of this is the official naming convention of the project as "Apache Foo".
 
-After we started the graduation discussion on the incubator mailing list, there was intense debate and continued handling of project issues for a month until a successful graduation.
+The donation of OpenDAL did not involve a name change, so most materials and core project members continued to refer to the project as "OpenDAL" after the donation, believing that the fact of the project's affiliation with ASF would be increasingly reinforced over time, and thus did not pay special attention to it.
 
-The majority of the issues that needed to be addressed before graduation were actually included in the checklist provided by the project mentor, Sheng Wu, as we mentioned above. During the process of addressing the checklist, some time was spent on researching and discussing versioned document issues, dependency compliance issues, and the final selection of PMC members. The rest of the tasks were completed smoothly and step by step.
+In reality, the primary violations of the brand policy within ASF mainly involve actions like DorisDB's direct use of the brand for promoting competing products, or referring to one's product as the commercial version of an ASF project in a business context. OpenDAL, originating from DatafuseLabs, has little to no relation to commercialization. Its core developers are mostly individuals, so I believe as long as there is no harm done to ASF's brand, it should be fine.
 
-However, an important issue was overlooked in the checklist, which is that the PMC of ASF projects must adhere to the brand policy to protect the project's brand and the ASF brand. One of the fundamental requirements is to refer to the project using the formal name "Apache Foo".
+However, IPMC Chair Justin Mclean did not see it this way. He raised concerns about branding issues during the [discussion of OpenDAL's graduation proposal](https://lists.apache.org/thread/3lwt4zkm1ovoskrz77y69pwntvn27xvs).
 
-The donation of OpenDAL did not involve a name change, so most materials and core project members still use the original name "OpenDAL" after the donation. They believe that since the project has been donated to ASF, the fact that the project belongs to ASF will be continuously reinforced over time, so they didn't pay much attention to it.
+Looking back, Justin's initial statement was "I found a few minor issues where some name and branding work needs to be done", which was not very strong. But after Xuanwo's first response failed to meet Justin's expectations of perfect adherence to ASF policies, he suggested that the PMC should "have a good read of our branding policy".
 
-In reality, clear violations of the brand policy within ASF mainly involve cases like DorisDB directly using the brand for promotional purposes or commercial companies referring to their products as a certain project's commercial edition, and so on. Although OpenDAL originated from DatafuseLabs, it has no relationship with commercialization. Most of its core developers participate as individuals. Therefore, as long as everyone does not harm the ASF brand, I thought it should be fine.
+Subsequently, when PMC members were unsure about what Justin was referring to, project mentor Sheng Wu expressed a different opinion, similar to what I mentioned above, that the OpenDAL project members had no intention of harming ASF's brand. The pointed-out issues were not significant and thus not graduation blockers.
 
-However, IPMC Chair Justin Mclean does not share the same view. [He raised the challenge of the brand issue in the discussion of the OpenDAL graduation proposal](https://lists.apache.org/thread/3lwt4zkm1ovoskrz77y69pwntvn27xvs).
+This response frustrated Justin, leading him to believe that the PMC disregarded policies and had a serious lack of willingness to comply, resulting in him voting against the graduation proposal with a -1.
 
-Looking back now, Justin's initial expression was actually "I found a few minor issues where some name and branding work needs to be done", and it wasn't very strong. But when Xuanwo's initial reply did not perfectly comply with ASF policies as Justin expected, he stated that the PMC should "have a good read of our branding policy".
-
-Subsequently, with the PMC members unsure of what specific problem Justin was referring to, the project mentor, Sheng Wu, expressed a different opinion, which is similar to what I thought earlier. He stated that the OpenDAL project members had no motivation to harm the ASF brand, and the actual issues pointed out were not significant problems, just not "perfect".
-
-Thus, Justin got the impression that the PMC disregarded the policies and had serious flaws in their subjective willingness to comply. As a result, he voted -1 on the graduation proposal.
-
-This process brought a very unpleasant experience to the OpenDAL project members. It's not that one cannot vote -1, but after subjectively determining that the OpenDAL PMC did not cooperate and was unwilling to solve the problem, the continuous challenges were not aimed at solving concrete issues. Instead, they aimed to prove that the OpenDAL project members were a group of bad people. Even if the OpenDAL PMC members read the brand policy and made some improvements, they did not receive recognition and suggestions for further improvement. Instead, they kept receiving -1 criticism of "you haven't done well enough".
+This process gave the OpenDAL project members an unpleasant experience. It's not that a -1 vote couldn't be cast, but after subjectively determining that the OpenDAL PMC was uncooperative and unwilling to solve problems, the continuous challenges were not aimed at solving specific issues but to prove that the OpenDAL project members were bad actors. Even after the OpenDAL PMC members had read through the brand policy and made some improvements, they did not receive recognition or further suggestions for improvement but continuous -1 criticism of "you are not doing well enough".
 
 As a consequence, [the OpenDAL graduation proposal did not pass with a unanimous vote](https://lists.apache.org/thread/nxd3218gdnylp8g2w7jhcjktorthjydl).
 
 :::note
 
-This whole story is also an evidence that "Open Communications" in [The Apache Way](https://www.apache.org/theapacheway/) works well. We can check these public records and read them objectively.
+This whole story is an evidence that "Open Communications" in [The Apache Way](https://www.apache.org/theapacheway/) works well. We can check these public records and read them objectively.
 
 :::
 
-OpenDAL PMC kept working on understanding the policies and improving its compliance. I started a few discussions on the trademarks channel. In the end, we discovered that in reality, many top-level projects did not strictly adhere to the brand policy. Even some content released through official channels at the ASF foundation level, which should be "reviewed" according to the brand policy, may have imperfections.
+OpenDAL PMC kept working on understanding the policies and improving its compliance. I started a few discussions on the trademarks channel. In the end, we discovered that in reality, many top-level projects did not strictly adhere to the brand policy. Even some content released through official channels at the ASF foundation level, which should be reviewed according to the brand policy, may have imperfections.
 
-However, this is not a reason for ASF project members to slack off. On the contrary, it reveals the vulnerability of ASF projects in terms of brand protection. The purpose of these discussions is not to argue right or wrong, but to reexamine the current implementation of the ASF brand policy with relevant personnel, so that we can evaluate the behavior of the OpenDAL PMC in dealing with brand policy issues over the past month and recent with a constructive perspective.
+However, this is not a reason for ASF project members to slack off. On the contrary, it reveals the vulnerability of ASF projects in terms of brand protection. The purpose of these discussions is not to argue right or wrong, but to review the status quo of how the ASF brand policy gets applied to ASF projects, so that we can evaluate whether the OpenDAL PMC dealt with brand policy issues actively.
 
 :::note
 
-In the ASF Incubator, top-level projects are generally not considered as references. From a practical point of view, this is because many top-level projects are not fully compliant, which is the issue mentioned here.
+In the ASF Incubator, top-level projects are generally not considered as references. From a practical point of view, this is because many top-level projects are not fully compliant, which is the issue mentioned above.
 
-However, I still insist that the practice of discussing top-level projects in the incubator should be maintained, at least for spreading and recognizing things they are doing well. For things that they are not doing well, the focus should not be limited to the scope of the Incubator, but should be approached from the perspective of the foundation to coordinate and resolve them.
+However, I still insist that we should take top-level projects as examples in the discussion on incubator's mailing list, at least for spreading and recognizing things they are doing well. For things that they are not doing well, we could speak it out and reach the related officers beyond the Incubator to coordinate and resolve them.
 
-This is because I am well aware that most open-source projects entering the Incubator are influenced by other top-level projects, and the object of incubation is to graduate and become a top-level project. If top-level projects are slacking off and not following the ASF policies, how can podlings understand the policy requirements they are expected to comply with?
+This is because I'm aware that most open-source projects entering the Incubator are influenced by other top-level projects, and the object of incubation is to graduate and become a top-level project. If top-level projects are slacking off and not following the ASF policies, how can podlings understand the policy requirements they are expected to comply with?
 
 :::
 
@@ -302,14 +296,16 @@ During the discussions, we identified various brand issues with OpenDAL and othe
 
 I believe the following points are worth noting.
 
-**The first one is about the way issues are addressed within the incubator.**
+**The first one is about the way issues are addressed within the Incubator.**
 
-As an open-source community, the best way to address issues is by submitting patches to fix them and conveying your ideas in the process. At the very least, providing a reproducible bug report is better than simply saying, "I think you have a problem, you should find and fix it yourself". I used an analogy that if someone who has never been involved in project development or actually used the project comes along and says, "I feel like your code has some performance issues, you'd better test it yourself and make changes", this kind of vague report won't get the attention of the project maintainers.
+As an open-source community, the best way to address issues is by submitting patches to fix them and conveying your ideas in the process. At the very least, providing a reproducible bug report is better than simply saying, "I think you have a problem, you should find and fix it yourself".
+
+I used an analogy that if someone who has never been involved in project development or actually used the project comes along and says, "I feel like your code has some performance issues, you'd better test it yourself and make changes", this kind of vague report won't get the attention of the project maintainers.
 
 This can be expressed as the following two comparisons:
 
-* Helping us rather than failing us
-* Correcting with contributions rather than instructions
+* Helping us rather than failing us;
+* Correcting with contributions rather than instructions.
 
 **The second one is about the issue of policy documentation and implementation.**
 
@@ -326,17 +322,23 @@ The content on the foundation's official website is scattered and unless one is 
 
 The best practices on the community development website are mostly from over a decade ago. Despite claiming to be the most widely used maturity model in the open-source world, it does not mention a single word about the branding issues that were challenged in the graduation discussion.
 
+:::info
+
+Rich Bowen, one of the Board of Directors for ASF, started to establish a working group to address issues around the community development website. Check out [this thread](https://lists.apache.org/thread/wj1prnm95cy0rlvjqgcq15rt2r28wyqg) for more details.
+
+:::
+
 Some of the "guidelines" on the Incubator website are not quite practical. Although they were discussed during the updates, most of the reviewers have not been involved in Incubation for quite a few time, making it difficult to have a concrete understanding of the issues that arise when implementing the guidelines.
 
 The content on the INFRA website is also fragmented, and unless one is an experienced long-time member, it is difficult to quickly find the relevant materials. Moreover, in the past two decades, ASF has primarily released Java libraries on Maven Central and source code archives on SVN repositories, resulting in a significant gap in the release practices for different languages and software in the modern era.
 
-On one hand, Apache OpenDAL has encountered Justin's recent challenges regarding branding issues. On the other hand, due to its multi-language and multi-platform ambitions for automated releases, it directly challenges the comfort zone of ASF INFRA, which has been in place for years. Therefore, compared to other projects, OpenDAL has had more interactions and time communicating with various ASF institutions during incubation and graduation.
+On one hand, Apache OpenDAL has encountered challenges about branding and trademarks. On the other hand, due to its multi-language and multi-platform ambitions for automated releases, it challenges the comfort zone of ASF INFRA, that they are working primarily with Java software distribution and source releases for years. Therefore, compared to other projects, OpenDAL has had more interactions with various ASF officers during its development.
 
-This can also be a good thing. After all, only with the addition of fresh blood can the foundation continue to progress. As long as the challenges are properly guided and resolved through collaboration, encountering problems is not a terrifying thing.
+This is a good thing. After all, only with the addition of fresh blood can the foundation continue to progress. As long as the challenges are properly guided and resolved through collaboration, encountering problems is not terrible.
 
 **The third one is about the development of the foundation itself.**
 
-Looking at it from another perspective, why does Justin vote -1 frequently within the incubator? In fact, this also reflects the issue of talent development within the incubator. Because too many people don't care about ASF policies and what form The Apache Way should take to build a community and release open-source software, these policy violations and cultural conflicts keep getting pushed to Justin to handle.
+From another perspective, why does Justin vote -1 frequently within the Incubator? In fact, this also reflects the issue of talent development within the Incubator. Because too many people don't care about ASF policies and what form The Apache Way should take to build a community and release open-source software, these policy violations and cultural conflicts keep pressing on Justin to handle.
 
 Over time, instead of making the effort to understand the history of project community development, who did what and why, the inherent laziness of human nature drives those with strict requirements to directly slap a -1 on the face and demand self-reflection. For me, I have enough motivation to address compliance and cultural issues. I believe that cooperation and resolving issues through discussion would be more effective. However, for certain projects, it is true that if you don't give them a -1, they won't pay attention to you, and there have been such cases.
 

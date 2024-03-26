@@ -22,7 +22,7 @@ Apache Kvrocks is the first incubator project (podling) that I mentored to gradu
 
 This article will start from the incubation process and my involvement, introducing the community status, achievements, and future directions of Apache Kvrocks.
 
-<!-- truncated -->
+<!-- truncate -->
 
 ## The bar to open-source participation
 

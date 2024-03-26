@@ -46,7 +46,7 @@ async fn do_business() -> Result<()> {
 
 As you can see, the API for data reading and writing is carefully designed. Users wanting to access data stored on different services only need to modify the configuration of the Operator, without having to change any code for the actual read and write operations.
 
-<!-- truncated -->
+<!-- truncate -->
 
 ## The History of Apache OpenDAL
 

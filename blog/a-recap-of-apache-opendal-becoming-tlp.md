@@ -197,7 +197,7 @@ Other language bindings currently under development include:
 * [C](https://github.com/apache/opendal/blob/main/bindings/c/README.md)
 * [C++](https://github.com/apache/opendal/blob/main/bindings/cpp/README.md)
 * [.NET](https://github.com/apache/opendal/blob/main/bindings/dotnet/README.md)
-* [Golang](https://github.com/apache/opendal/blob/main/bindings/golang/README.md)
+* [Golang](https://github.com/apache/opendal/blob/main/bindings/go/README.md)
 * [Haskell](https://github.com/apache/opendal/blob/main/bindings/haskell/README.md)
 * [Lua](https://github.com/apache/opendal/blob/main/bindings/lua/README.md)
 * [OCaml](https://github.com/apache/opendal/blob/main/bindings/ocaml/README.md)
